@@ -23,16 +23,16 @@
 }
 
 .MuiTooltip-tooltipPlacementLeft {
-  margin-right: 4px !important;
+  margin-bottom: 4px !important;
 }
 
 .MuiTooltip-tooltipPlacementRight {
-  margin-left: 4px !important;
+  margin-top: 4px !important;
 }
 .MuiTooltip-tooltipPlacementTop {
   margin-bottom: .5em !important;
   max-width: 300px !important;
-  margin-left: -.2em !important;
+  margin-top: -.2em !important;
   padding: 0.6em .75em !important;
   box-shadow: 2px 2px 6px white !important;
   border: 1px solid var(--c_gray1) !important;
@@ -40,12 +40,12 @@
 
 .MuiTooltip-tooltipPlacementLeft span {
   border-radius: 4px 0 0 4px;
-  padding-right: 8px;
+  padding-bottom: 8px;
 }
 
 .MuiTooltip-tooltipPlacementRight span {
   border-radius: 0 4px 4px 0;
-  padding-left: 8px;
+  padding-top: 8px;
 }
 
 /* CONNECTABLE  */
@@ -104,55 +104,49 @@
   border-radius: 0;
   z-index: 999;
 }
-.react-flow__node .react-flow__handle-left {
+.react-flow__node .react-flow__handle-top {
   transform-origin: right center;
-  left: -6px;
+  left: .5em;
   top: 7px;
-  border-left: 1px solid var(--c_gray1);
+  border-top: 1px solid var(--c_gray1);
 }
-.react-flow__node .react-flow__handle-left.is-connectable {
-  border-left: 2px solid var(--c_gray4) !important;
+.react-flow__node .react-flow__handle-top.is-connectable {
+  border-top: 2px solid var(--c_gray4) !important;
 }
-.react-flow__node .react-flow__handle-right.is-connectable {
-  border-right: 2px solid var(--c_gray4) !important;
+.react-flow__node .react-flow__handle-bottom.is-connectable {
+  border-bottom: 2px solid var(--c_gray4) !important;
 }
-.react-flow__node .react-flow__handle-right {
+.react-flow__node .react-flow__handle-bottom {
   transform-origin: left center;
-  border-right: 1px solid var(--c_gray1);
+  border-bottom: 1px solid var(--c_gray1);
   right: -6px;
 }
-
-/* multiple outputs */
-.multi-outputs .react-flow__handle-right {
-  top: unset !important;
+.react-flow__node .react-flow__handle-top {
+  transform-origin: left center;
+  border-top: 1px solid var(--c_gray1);
+  top: 7px;
+  right: -6px;
 }
+.react-flow__node .react-flow__handle-bottom {
+  transform-origin: left center;
+  border-bottom: 1px solid var(--c_gray1);
+  top: unset;
+  left: .5em;
+  bottom: -7px;
 
-ul.multi-outputs {
-  padding: 0;
-  margin: 0;
-  width: 0px;
-  position: absolute;
-  top: 40px;
-  right: 0;
-  height: 20px;
-}
-
-/*ul.multi-outputs li{}*/
-ul.multi-outputs li::marker {
-  content: "" !important;
 }
 
 /* handle hover */
-.react-flow__node .react-flow__handle-left:hover {
+.react-flow__node .react-flow__handle-top:hover {
   transform: translate(0, -50%) scale(1.5, 1);
   cursor: cell;
 }
-.react-flow__node .react-flow__handle-right:hover {
+.react-flow__node .react-flow__handle-bottom:hover {
   transform: translate(0, -50%) scale(1.5, 1);
   cursor: cell;
 }
-.react-flow__node .react-flow__handle-left::after,
-.react-flow__node .react-flow__handle-right::after {
+.react-flow__node .react-flow__handle-top::after,
+.react-flow__node .react-flow__handle-bottom::after {
   content: "";
   position: absolute;
   left: -5px;
@@ -160,17 +154,17 @@ ul.multi-outputs li::marker {
   width: 17px;
   height: 100%;
 }
-.react-flow__node .react-flow__handle-right::after {
+.react-flow__node .react-flow__handle-bottom::after {
   left: unset;
   right: -5px;
   border-radius: 0px;
 }
-.react-flow.is-connecting .react-flow__node .react-flow__handle-right::after,
-.react-flow.is-connecting .react-flow__node .react-flow__handle-left::after {
+.react-flow.is-connecting .react-flow__node .react-flow__handle-bottom::after,
+.react-flow.is-connecting .react-flow__node .react-flow__handle-top::after {
   display: none;
 }
-.react-flow.is-connecting .react-flow__node .react-flow__handle-right,
-.react-flow.is-connecting .react-flow__node .react-flow__handle-left {
+.react-flow.is-connecting .react-flow__node .react-flow__handle-bottom,
+.react-flow.is-connecting .react-flow__node .react-flow__handle-top {
   pointer-events: none;
 }
 

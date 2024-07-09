@@ -205,11 +205,12 @@ const PropertyInput: React.FC<PropertyInputProps> = ({
 
   if (hideInput) {
     return (
-      <PropertyLabel
-        name={property.name}
-        description={property.description}
-        id={id}
-      />
+      <> </>
+      // <PropertyLabel
+      //   name={property.name}
+      //   description={property.description}
+      //   id={id}
+      // />
     );
   }
 

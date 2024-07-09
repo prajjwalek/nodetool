@@ -94,7 +94,7 @@ const NodeOutput = ({ id, output }: NodeOutputProps) => {
       <Handle
         type="source"
         id={output.name}
-        position={Position.Right}
+        position={Position.Bottom}
         isConnectable={true}
         onContextMenu={(e) => outputContextMenu(e, id, output)}
       />

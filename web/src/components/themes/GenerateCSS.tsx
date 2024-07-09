@@ -16,7 +16,7 @@ export const generateCSS = (() => {
       const dataType = DATA_TYPES[key];
       const { color, textColor, slug } = dataType;
       s += `
-        .node-menu ul li.${slug} {border-left: 4px solid  ${color};}
+        .node-menu ul li.${slug} {border-top: 4px solid  ${color};}
         .react-flow g.custom-connection-line path.${slug} {
           stroke-width: 2;
           stroke: ${color};
@@ -40,8 +40,8 @@ export const generateCSS = (() => {
           stroke-width: 2;
           fill: ${textColor};
         }
-        .react-flow__handle-left.${slug},
-        .react-flow__handle-right.${slug} {
+        .react-flow__handle-top.${slug},
+        .react-flow__handle-bottom.${slug} {
           background-color: ${color};
         }
       `;

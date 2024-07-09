@@ -72,6 +72,6 @@
   --c_node_header_bg: #202020;
   --c_node_header_bg_group: #333333;
 
-  --handle_width: 6px;
-  --handle_height: 12px;
+  --handle_width: 8px;
+  --handle_height: 4px;
 }

@@ -125,7 +125,7 @@ const PropertyField: React.FC<PropertyFieldProps> = ({
             <Handle
               type="target"
               id={property.name}
-              position={Position.Left}
+              position={Position.Top}
               isConnectable={true}
               className={Slugify(property.type.type)}
               onContextMenu={(e) => inputContextMenu(e, id, property.type.type)}
